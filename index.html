@@ -3,164 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doktor Kartochkasi – Akvarel</title>
+    <title>Doktor Kartochkasi – Akvarel Usulida</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        /* AKVAREL FONI */
-        body {
-            margin: 0;
-            font-family: 'Georgia', serif;
-            background: linear-gradient(135deg, #e0f7fa, #b2ebf2, #80deea);
-            color: #333;
-            min-height: 100vh;
-            position: relative;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><defs><filter id="a"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4"/><feDiffuseLighting lighting-color="%23ffffff" surfaceScale="2"><feDistantLight azimuth="45" elevation="60"/></feDiffuseLighting></filter></defs><rect width="100" height="100" fill="%23b2ebf2" filter="url(%23a)"/></svg>') repeat;
-            opacity: 0.12;
-            z-index: -1;
-        }
-
-        /* NAVIGATSIYA */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(255,255,255,0.8);
-            backdrop-filter: blur(10px);
-            padding: 12px 30px;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        }
-        .logo i {font-size: 28px; color: #0299b3;}
-        nav ul {display: flex; list-style: none; margin:0; padding:0;}
-        nav ul li {margin-left: 25px;}
-        nav ul li a {
-            text-decoration: none;
-            color: #01579b;
-            font-weight: 600;
-            font-size: 1.05rem;
-            position: relative;
-        }
-        nav ul li a::after {
-            content: ''; position: absolute; width: 0; height: 2px;
-            background: #ff7043; bottom: -4px; left: 50%; transition: all .3s;
-        }
-        nav ul li a:hover {color: #ff7043;}
-        nav ul li a:hover::after {width: 100%; left:0;}
-
-        /* DOKTOR KARTA */
-        .doctor-card {
-            display: flex;
-            align-items: center;
-            background: rgba(255,255,255,0.9);
-            margin: 30px auto;
-            padding: 25px;
-            max-width: 860px;
-            border-radius: 20px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
-            position: relative;
-            overflow: hidden;
-        }
-        .doctor-card::before {
-            content: ""; position: absolute; inset: -10px;
-            background: linear-gradient(45deg, #ff7043, #ffca28, #66bb6a, #29b6f6);
-            border-radius: 25px; z-index: -1; filter: blur(12px); opacity: 0.3;
-        }
-        .doctor-card img {
-            width: 320px; height: 220px; object-fit: cover;
-            border-radius: 16px; margin-right: 25px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
-            transition: transform .4s;
-        }
-        .doctor-card img:hover {transform: scale(1.03);}
-        .doctor-info h2 {margin: 0 0 12px; color: #01579b; font-size: 1.8rem;}
-        .doctor-info p {color: #555; line-height: 1.6; font-style: italic;}
-
-        /* GALEREYA */
-        .gallery {
-            text-align: center; margin: 40px auto; max-width: 860px;
-        }
-        .gallery h2 {
-            color: #01579b; font-size: 1.9rem; margin-bottom: 20px;
-            position: relative; display: inline-block;
-        }
-        .gallery h2::after {
-            content: ''; position: absolute; width: 60px; height: 4px;
-            background: #ff7043; bottom: -8px; left: 50%; transform: translateX(-50%);
-            border-radius: 2px;
-        }
-        .gallery-images {
-            display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
-        }
-        .gallery-images img {
-            width: 210px; height: 160px; object-fit: cover;
-            border-radius: 16px; box-shadow: 0 6px 14px rgba(0,0,0,0.12);
-            transition: all .4s ease;
-        }
-        .gallery-images img:hover {
-            transform: translateY(-6px) scale(1.04);
-            box-shadow: 0 12px 22px rgba(0,0,0,0.18);
-        }
-
-        /* FOOTER – ICON RASMLAR BILAN */
-        footer {
-            background: rgba(3, 33, 55, 0.92);
-            color: #e0f7fa;
-            padding: 30px 20px;
-            text-align: center;
-            position: relative;
-        }
-        footer::before {
-            content: ""; position: absolute; inset: 0;
-            background: linear-gradient(180deg, rgba(255,255,255,0.08), transparent);
-            pointer-events: none;
-        }
-
-        .contact-info p {
-            margin: 12px 0;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-        .contact-info img {
-            width: 22px; height: 22px;
-            object-fit: contain;
-            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.3));
-        }
-
-        .social-links {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .social-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: color .3s, transform .3s;
-        }
-        .social-links a:hover {
-            color: #ffca28;
-            transform: translateY(-2px);
-        }
-        .social-links img {
-            width: 28px; height: 28px;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
-        }
-    </style>
 </head>
 <body>
 
@@ -179,7 +24,7 @@
     <div class="doctor-card">
         <img src="assets/4444.jpg" alt="Shifokor">
         <div class="doctor-info">
-            <h2>Shifokor: Ivanov Ivan Ivanovich</h2>
+            <h2>Имя доктора: Жумаева Гулмира Бахтиёр кизи</h2>
             <p>Bu yerda umumiy ma'lumotlar, tajriba va malaka tavsifi joylashtiriladi. 
                15 yillik tajribaga ega, yuqori malakali kardiolog.</p>
         </div>
@@ -195,29 +40,16 @@
         </div>
     </div>
 
-    <!-- FOOTER – SIZNING ICON RASMLARINGIZ BILAN -->
+    <!-- FOOTER -->
     <footer>
         <div class="contact-info">
-            <p>
-                <img src="assets/7777.jpg" alt="Telefon"> 
-                Telefon: +7 (999) 123-45-67
-            </p>
-            <p>
-                <i class="fas fa-envelope" style="color:#29b6f6;"></i> 
-                Pochta: doctor@mail.ru
-            </p>
+            <p><i class="fas fa-phone"></i> Telefon: +9960124642</p>
+            <p><i class="fas fa-envelope"></i> Pochta: Gulmirajumayeva557@icloud.com</p>
         </div>
-
         <div class="social-links">
-            <a href="#">
-                <img src="assets/6666.jpg" alt="Telegram"> Telegram
-            </a>
-            <a href="#">
-                <img src="assets/5555.jpg" alt="VKontakte"> VKontakte
-            </a>
-            <a href="#">
-                <img src="assets/8888.jpg" alt="Rutube"> Rutube
-            </a>
+            <a href="#"><i class=""></i> Telegram</a>
+            <a href="#"><i class=""></i> VKontakte</a>
+            <a href="#"><i class=""></i> Rutube</a>
         </div>
     </footer>
 

@@ -75,7 +75,6 @@ nav ul li a:hover::after {
     width: 100%;
     left: 0;
 }
-
 .doctor-card {
     display: flex;
     align-items: center;
@@ -126,6 +125,9 @@ nav ul li a:hover::after {
     font-style: italic;
 }
 
+/* ──────────────────────────────────────
+           GALEREYA – akvarel kartalar
+           ────────────────────────────────────── */
 .gallery {
     text-align: center;
     margin: 40px auto;
@@ -174,6 +176,9 @@ nav ul li a:hover::after {
     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
 }
 
+/* ──────────────────────────────────────
+           FOOTER – akvarel ikonlar
+           ────────────────────────────────────── */
 footer {
     background: rgba(3, 33, 55, 0.92);
     color: #e0f7fa;
