@@ -20,9 +20,6 @@ body::before {
     z-index: -1;
 }
 
-/* ──────────────────────────────────────
-           NAVIGATSIYA – akvarel ramka
-           ────────────────────────────────────── */
 nav {
     display: flex;
     justify-content: space-between;
@@ -79,9 +76,6 @@ nav ul li a:hover::after {
     left: 0;
 }
 
-/* ──────────────────────────────────────
-           DOKTOR KARTA – akvarel ramka + filtr
-           ────────────────────────────────────── */
 .doctor-card {
     display: flex;
     align-items: center;
@@ -132,9 +126,6 @@ nav ul li a:hover::after {
     font-style: italic;
 }
 
-/* ──────────────────────────────────────
-           GALEREYA – akvarel kartalar
-           ────────────────────────────────────── */
 .gallery {
     text-align: center;
     margin: 40px auto;
@@ -183,9 +174,6 @@ nav ul li a:hover::after {
     box-shadow: 0 12px 22px rgba(0, 0, 0, 0.18);
 }
 
-/* ──────────────────────────────────────
-           FOOTER – akvarel ikonlar
-           ────────────────────────────────────── */
 footer {
     background: rgba(3, 33, 55, 0.92);
     color: #e0f7fa;
